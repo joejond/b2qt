@@ -27,13 +27,6 @@
 ##
 ############################################################################
 
-include conf/distro/include/fsl.inc
+FILESEXTRAPATHS_append := "${THISDIR}/${PN}:"
 
-DEPLOY_CONF_NAME = "i.MX7S WaRP"
-
-PREFERRED_PROVIDER_virtual/egl = "opengldummy"
-PREFERRED_PROVIDER_virtual/libgles2 = "opengldummy"
-
-DISTRO_FEATURES_remove = "webengine wayland"
-
-KERNEL_DEVICETREE = "imx7d-warp.dtb"
+SRC_URI += "file://0001-Enable-atmel-mxt-multitouch-controller.patch"

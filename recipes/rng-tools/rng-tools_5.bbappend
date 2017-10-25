@@ -27,13 +27,19 @@
 ##
 ############################################################################
 
-include conf/distro/include/fsl.inc
+FILESEXTRAPATHS_append := "${THISDIR}/${PN}:"
+SRC_URI += "\
+    file://rngd.service \
+    "
 
-DEPLOY_CONF_NAME = "i.MX7S WaRP"
+inherit systemd
 
-PREFERRED_PROVIDER_virtual/egl = "opengldummy"
-PREFERRED_PROVIDER_virtual/libgles2 = "opengldummy"
+do_install_append() {
+    if ${@bb.utils.contains('DISTRO_FEATURES', 'systemd', 'true', 'false', d)}; then
+        install -d ${D}${systemd_unitdir}/system
+        install -m 644 ${WORKDIR}/rngd.service ${D}${systemd_unitdir}/system
+        sed -i -e 's,@SBINDIR@,${sbindir},g' ${D}${systemd_unitdir}/system/rngd.service
+    fi
+}
 
-DISTRO_FEATURES_remove = "webengine wayland"
-
-KERNEL_DEVICETREE = "imx7d-warp.dtb"
+SYSTEMD_SERVICE_${PN} = "rngd.service"

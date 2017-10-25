@@ -52,6 +52,7 @@ RDEPENDS_${PN} = "\
         tzdata-asia \
         tzdata-europe \
         connman \
+        rng-tools \
         ${@bb.utils.contains("DISTRO_FEATURES", "wayland", "weston weston-examples", "", d)} \
         ${MACHINE_EXTRA_INSTALL} \
         "

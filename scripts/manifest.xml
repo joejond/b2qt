@@ -16,7 +16,7 @@
 
   <project name="poky"
            remote="yocto"
-           revision="4a39979c8d1e560fa54240e99734a651dfbaa63a"
+           revision="ce26a57e04ad65c02087629701d96448a44e73d5"
            path="sources/poky"/>
   <project name="meta-openembedded"
            remote="oe-mirror"
@@ -24,7 +24,7 @@
            path="sources/meta-openembedded"/>
   <project name="meta-qt5"
            remote="qtyocto"
-           revision="f8bd95146a0745e3d980f39f8cac1fbe6d7ad0eb"
+           revision="f3213460a0495cac618d37bcbe59fddd58b6d65d"
            path="sources/meta-qt5"/>
   <project name="meta-mingw"
            remote="qtyocto"
@@ -33,12 +33,12 @@
 
   <project name="meta-freescale"
            remote="freescale"
-           revision="98d57b06d88cb22129bd417a9a3edbaf24612460"
+           revision="10d8ccb5ff2c31d2a5b13e088a8ec9511cbc3e72"
            path="sources/meta-freescale"
            groups="notdefault,external,fsl,toradex,ti,smx6,renesas-gen3"/>
   <project name="meta-freescale-3rdparty"
            remote="freescale"
-           revision="fd3962a994b2f477d3e81fa7083f6b3d4e666df5"
+           revision="35badbde05d4f10d4faeefc30bc126b5bd228e2e"
            path="sources/meta-freescale-3rdparty"
            groups="notdefault,external,fsl,toradex,smx6"/>
   <project name="meta-ti"
@@ -73,12 +73,12 @@
            groups="notdefault,external,renesas-gen3"/>
   <project name="meta-toradex-bsp-common"
            remote="toradex"
-           revision="b128af95613557af8deaea30212e89e6316eab88"
+           revision="429d294f9b271433d4d0130530677dc417e6ec6e"
            path="sources/meta-toradex-bsp-common"
            groups="notdefault,external,toradex"/>
   <project name="meta-toradex-nxp"
            remote="toradex"
-           revision="89a17628efef01fd5af202e88d79188df08f636f"
+           revision="45c33b79a734d016dddb997c1895b53202286f23"
            path="sources/meta-toradex-nxp"
            groups="notdefault,external,toradex"/>
 
